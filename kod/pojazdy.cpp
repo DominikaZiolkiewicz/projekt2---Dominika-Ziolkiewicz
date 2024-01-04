@@ -13,17 +13,14 @@ const string Pojazd::get_nr_rej() const {
     return nr_rejestracyjny;
 }
 
-void Pojazd::print() const {
-    cout<<"Marka: "<<marka<<" Model: "<<model<<" Cena: "<<cena<<" Nr. rejestracyjny: "<<nr_rejestracyjny;
-}
 
-void Osobowy::print() const {
-    Pojazd::print();
+const void Osobowy::print(ostream& os) const {
+    os<<"OSOBOWY, Marka: "<<marka<<", Model: "<<model<<", Cena: "<<cena<<"zl, Nr. rejestracyjny: "<<nr_rejestracyjny;
     string czy = klimatyzacja ? "tak" : "nie";
-    cout<<" klimatyzacja: "<<czy<<endl;
+    os<<", klimatyzacja: "<<czy<<endl;
 }
 
-void Motor::print() const {
-    Pojazd::print();
-    cout<<" poj. silnika: "<<pojemnosc_silnika<<endl;
+const void Motor::print(ostream& os) const {
+    os<<"MOTOR, Marka: "<<marka<<", Model: "<<model<<", Cena: "<<cena<<"zl, Nr. rejestracyjny: "<<nr_rejestracyjny;
+    os<<", poj. silnika: "<<pojemnosc_silnika<<endl;
 }

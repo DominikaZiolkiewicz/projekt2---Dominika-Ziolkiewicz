@@ -2,6 +2,7 @@
 #define POJAZDY
 
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -17,7 +18,6 @@ class Pojazd{
     Pojazd() = default;
     Pojazd(string mar, string mod, int ce, string nr);
     const string get_nr_rej() const;
-    virtual void print() const;
 };
 
 class Osobowy : public Pojazd{
@@ -26,7 +26,7 @@ class Osobowy : public Pojazd{
 
     public:
     Osobowy(string mar, string mod, int ce, string nr, bool klima);
-    void print() const override;
+    const void print(ostream& os) const;
 };
 
 
@@ -36,8 +36,7 @@ class Motor : public Pojazd{
 
     public:
     Motor(string mar, string mod, int ce, string nr, int poj);
-    void print() const override;
-
+    const void print(ostream& os) const;
 };
 
 #endif

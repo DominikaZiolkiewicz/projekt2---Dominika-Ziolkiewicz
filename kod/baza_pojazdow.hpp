@@ -3,6 +3,7 @@
 
 #include <variant>
 #include <map>
+#include <fstream>
 #include "pojazdy.hpp"
 
 using v_pojazd = variant<Osobowy, Motor>;
@@ -15,7 +16,9 @@ class BazaPojazdow{
     BazaPojazdow();
     void dodaj_pojazd(const v_pojazd& pojazd);
     void usun_pojazd(string nr_rej);
-    void drukuj();
+
+    friend ostream& operator<<(ostream& os, BazaPojazdow& bp);
+
 };
 
 #endif
