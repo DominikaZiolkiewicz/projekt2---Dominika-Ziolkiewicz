@@ -1,5 +1,5 @@
 CXX = g++ 
-CXXFLAGS = -Wall -I. -g
+CXXFLAGS = -Wall -I.
 OBJS = baza_pojazdow.o pojazdy.o main.o 
 DEPS = pojazdy.hpp baza_pojazdow.hpp 
 

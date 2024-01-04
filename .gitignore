@@ -1,3 +1,5 @@
-all
+.vscode
 *.o
 *.gch
+all
+*.exe
