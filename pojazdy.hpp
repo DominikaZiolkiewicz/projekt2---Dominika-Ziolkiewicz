@@ -16,6 +16,8 @@ class Pojazd{
     public:
     Pojazd() = default;
     Pojazd(string mar, string mod, int ce, string nr);
+    const string get_nr_rej() const;
+    virtual void print() const;
 };
 
 class Osobowy : public Pojazd{
@@ -24,6 +26,7 @@ class Osobowy : public Pojazd{
 
     public:
     Osobowy(string mar, string mod, int ce, string nr, bool klima);
+    void print() const override;
 };
 
 
@@ -33,6 +36,8 @@ class Motor : public Pojazd{
 
     public:
     Motor(string mar, string mod, int ce, string nr, int poj);
+    void print() const override;
+
 };
 
 #endif
