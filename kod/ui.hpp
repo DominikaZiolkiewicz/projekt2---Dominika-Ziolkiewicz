@@ -10,9 +10,9 @@ class UI{
 
     public:
     UI(BazaPojazdow& bp);
-    void run();
-    void drukuj();
-    void dodaj_osobowy();
+    void run();         //pętla główna programu
+    void drukuj();      //wypisywanie zawartosci aktualnie trzymanej na mapie bazy danych
+    void dodaj_osobowy();   
     void dodaj_motor();
 };
 

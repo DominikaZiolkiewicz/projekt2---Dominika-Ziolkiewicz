@@ -30,11 +30,11 @@ void UI::run(){
             drukuj();
             cout<<endl;
         }
-        else if(komenda == "do"){
+        else if(komenda == "do"){   //dodaj osobowy
             try{
                 dodaj_osobowy();
             }
-            catch(const exception& e){
+            catch(const exception& e){  //jeśli uzytkownik podał zły format danych
                 cout<<e.what()<<endl;
                 cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -42,11 +42,11 @@ void UI::run(){
                 continue;
             }
         }
-        else if(komenda == "dm"){
+        else if(komenda == "dm"){   //dodaj motor
            try{
                 dodaj_motor();
             }
-            catch(const exception& e){
+            catch(const exception& e){  //jeśli uzytkownik podał zły format danych
                 cout<<e.what()<<endl;
                 cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -54,16 +54,16 @@ void UI::run(){
                 continue;
             } 
         }
-        else if(komenda == "us"){
+        else if(komenda == "us"){   //usun pojazd
             cout<<"Podaj numer rejestracyjny pojazdu, ktory chcesz usunac z bazy"<<endl;
             cin>>nr;
             baza->usun_pojazd(nr);
             nr = "";
         }
-        else if(komenda == "zapisz"){
+        else if(komenda == "zapisz"){   //zapisz baze do pliku
             baza->zapisz();
         }
-        else if(komenda == "wczytaj"){
+        else if(komenda == "wczytaj"){  //wczytaj baze z pliku
             baza->wczytaj();
         }
         else
