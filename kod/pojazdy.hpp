@@ -27,6 +27,8 @@ class Osobowy : public Pojazd{
     public:
     Osobowy(string mar, string mod, int ce, string nr, bool klima);
     const void print(ostream& os) const;
+    const void zapis(ofstream& os) const;
+    string get_string() const;
 };
 
 
@@ -37,6 +39,8 @@ class Motor : public Pojazd{
     public:
     Motor(string mar, string mod, int ce, string nr, int poj);
     const void print(ostream& os) const;
+    const void zapis(ofstream& os) const;
+    string get_string() const;
 };
 
 #endif

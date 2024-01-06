@@ -10,14 +10,17 @@ using v_pojazd = variant<Osobowy, Motor>;
 
 class BazaPojazdow{
     private:
-    map<string, v_pojazd> baza;
+    map<string, v_pojazd> mapa;
 
     public:
     BazaPojazdow();
     void dodaj_pojazd(const v_pojazd& pojazd);
     void usun_pojazd(string nr_rej);
+    void zapisz();
+    void wczytaj();
 
     friend ostream& operator<<(ostream& os, BazaPojazdow& bp);
+    //friend ofstream& operator<<(ofstream& os, BazaPojazdow& bp);
 
 };
 

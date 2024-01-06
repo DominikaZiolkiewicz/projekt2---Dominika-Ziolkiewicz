@@ -1,9 +1,5 @@
 #include "baza_pojazdow.hpp"
-#include "pojazdy.hpp"
 #include "ui.hpp"
-#include <iostream>
-
-using namespace std;
 
 int main(){
 

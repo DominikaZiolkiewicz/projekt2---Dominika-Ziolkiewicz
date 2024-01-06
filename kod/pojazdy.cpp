@@ -20,7 +20,33 @@ const void Osobowy::print(ostream& os) const {
     os<<", klimatyzacja: "<<czy<<endl;
 }
 
+// const void Osobowy::zapis(ofstream& os) const {
+//     string content;
+//     string czy = klimatyzacja ? "tak" : "nie";
+//     content = marka+model+to_string(cena)+nr_rejestracyjny+czy;
+//     int size = content.size();
+//     os<<size<<content;
+// }
+
 const void Motor::print(ostream& os) const {
     os<<"MOTOR, Marka: "<<marka<<", Model: "<<model<<", Cena: "<<cena<<"zl, Nr. rejestracyjny: "<<nr_rejestracyjny;
     os<<", poj. silnika: "<<pojemnosc_silnika<<endl;
+}
+
+// const void Motor::zapis(ofstream& os) const {
+//     os<<"M "<<marka<<" "<<model<<" "<<cena<<" "<<nr_rejestracyjny;
+//     os<<" "<<pojemnosc_silnika<<endl;
+// }
+
+string Osobowy::get_string() const {
+    string content;
+    string czy = klimatyzacja ? "tak" : "nie";
+    content = "O"+marka+";"+model+";"+to_string(cena)+";"+nr_rejestracyjny+";"+czy;
+    return content;
+}
+
+string Motor::get_string() const {
+    string content;
+    content = "M"+marka+";"+model+";"+to_string(cena)+";"+nr_rejestracyjny+";"+to_string(pojemnosc_silnika);
+    return content;
 }

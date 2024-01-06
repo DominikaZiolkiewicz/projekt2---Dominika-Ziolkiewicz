@@ -12,6 +12,8 @@ class UI{
     UI(BazaPojazdow& bp);
     void run();
     void drukuj();
+    void dodaj_osobowy();
+    void dodaj_motor();
 };
 
 #endif
